@@ -1,0 +1,17 @@
+<div class="input-group mb-3">
+    <input 
+        type="text" 
+        #txtBuscar 
+        (keyup.enter)="buscar()" 
+        (input)="teclaPresionada()" 
+        class="form-control"
+        [placeholder]="placeholder"
+        aria-label="Buscar por el nombre del pais" 
+        aria-describedby="button-search">
+    <button 
+        (click)="buscar()" 
+        class="btn btn-outline-primary" 
+        type="button" id="button-search">
+        Buscar
+    </button>
+</div>
