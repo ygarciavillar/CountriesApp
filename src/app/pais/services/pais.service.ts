@@ -17,4 +17,9 @@ export class PaisService {
     const url = `${this._API}/${query}/${busqueda}`
     return this.http.get<Pais[]>(url)
   }
+
+  buscarCode(codigo: string): Observable<Pais>{
+    const url = `${this._API}/alpha/${codigo}`
+    return this.http.get<Pais>(url)  
+  }
 }
